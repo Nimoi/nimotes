@@ -39,6 +39,23 @@ SlashCmdList["FUN"] = function()
 end;
 SLASH_FUN1="/fun";
 
+-- say the meow
+SlashCmdList["MEOW"] = function()
+    local action=(GetShapeshiftForm(true)==4 and random() < 0.5 and "chirps" or "meows"); 
+    if IsShiftKeyDown() then 
+        if UnitExists("mouseover") then 
+            SendChatMessage(action.." at " .. UnitName("mouseover")..".", "EMOTE") 
+        end 
+    else 
+        if UnitExists("target") then
+            SendChatMessage(action.." at %t.", "EMOTE") 
+        else 
+            SendChatMessage(action..".", "EMOTE")
+        end
+    end
+end;
+SLASH_MEOW1="/meow";
+
 -- do tests and stuff
 SlashCmdList["NIMTEST"] = function()
     zoneName = GetZoneText()
