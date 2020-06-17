@@ -1,0 +1,8 @@
+## Interface: 11302
+## Title: Nimotes
+## Notes: New commands for bad behavior
+## Author: Nimoi
+## Version: 1337
+## DefaultState: Enabled
+## LoadOnDemand: 0
+Nimotes.lua
